@@ -35,10 +35,10 @@ fetch('http://localhost:8999/task/read/'+id)
   });
 }
 
-document.querySelector("form.NovRecord").addEventListener("submit",function(stop) {
+document.querySelector("form.DecRecord").addEventListener("submit",function(stop) {
     stop.preventDefault();
 
-    let formElements = document.querySelector("form.NovRecord").elements;
+    let formElements = document.querySelector("form.DecRecord").elements;
 
     let id = formElements["taskId"].value;
     let title = formElements["taskTitle"].value;

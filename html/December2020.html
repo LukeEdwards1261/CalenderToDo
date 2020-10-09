@@ -42,17 +42,77 @@
             </div>
           </nav>
 
-          <div class="container">
+          <div id="populate-table" class="container">
             <h1>December 2020</h1>
-                <table class = "table table-dark"></table>
+            <table id="week2" class="table table-dark"></table>
+          </div>
+      
+          <div class="container">
+            <button type="button" class="btn btn-primary" data-target="#AddNewTable">
+              Create table</button>
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#AddTableModal">
+              Add to table</button>
+            <button type="button" id="DeleteAllDecemberEvent" class="btn btn-danger">Delete All Tasks</button>
+          </div>
+      
+          <div
+            class="modal fade"
+            id="AddTableModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+      
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-default">Title</span>
+                    </div>
+                    <input type="text" id="createTitle" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  </div>
+      
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-default">Task</span>
+                    </div>
+                    <input type="text" id="createTask" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  </div>
+      
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-default">Type</span>
+                    </div>
+                    <input type="text" id="createType" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  </div>
+      
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                   <button type="button" id="createDecTable" class="btn btn-primary">Save changes</button>      <!--createOctTable to createNovTable -->
+                </div>
+              </div>
             </div>
-            <div class="container">
-          <button type="button" class="btn btn-primary">Create table</button>
-          <button type="button" class="btn btn-success">Update table</button>
-          <button type="button" class="btn btn-danger">Delete table</button>
-            </div>
-          
-          <table class = "importData table-bordered table-dark"></table>
+          </div>
+
 
           <script src="../js/December.js"></script>
           <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

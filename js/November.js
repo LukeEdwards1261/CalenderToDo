@@ -140,7 +140,7 @@ function deleteNovRecord(id){
 
 }
 
-  document.getElementById("DeleteAllOctoberEvent").addEventListener('click',function(stop){
+  document.getElementById("DeleteAllNovemberEvent").addEventListener('click',function(stop){
     stop.preventDefault();
     deleteAllNov();
     console.log("Testing")
